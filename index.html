@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>index</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="resources/css/sticky-footer.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+  </head>
+
+  <body>
+	<div class="container">
+		
+		<div class="header clearfix">
+			<nav class="navbar navbar-fixed-top">
+				<div class="container">
+					<div class="content"></div>
+				</div>
+			</nav>  
+		</div>
+
+		<!-- Begin page content -->
+		<section class="content">
+			
+			<div class="container">
+	
+				<div class="contentlayer">
+										
+					<section class="avatar_page">
+						<img class="logo" src="resources/images/logo.png" /> 
+						
+						<div class="ls_title">Личный кабинет</div>
+						
+						<div class="table">
+							<!--<div class ="table-row"> -->
+								<div class="item_title">
+									<div class="square"></div>
+									<div class="dot_border"></div>
+									<div style="text-align:center;width:100%;">
+										<div class="button_edit"></div>
+									</div>
+									
+								</div>
+								<div class="table_cell">
+									
+									<div class="insert-cell" style="height:136px;"> <span></span> <button class="edit_pic"></button></div>
+									<div class="insert-cell"><span>город:</span><button class="edit_pic"></button></div>
+									<div class="insert-cell"><span>возраст:</span><button class="edit_pic"></button></div>
+									<div class="insert-cell"><span>рост:</span><button class="edit_pic"></button></div>
+									<div class="insert-cell">пол:<button class="edit_pic"></button></div>
+									<div class="insert-cell" style="height:132px;">Загрузить портфолио:<span class="pictogramms"><span class="img"><img src="resources/images/photo.png" /><br>Фото</span><span class="img"><img src="resources/images/camera.png" /><br>Видео</span></span></div>
+									<div class="insert-cell" style="height:95px;border-bottom:0;height: 95px;display: table-cell;width: 800px;vertical-align: middle;">
+										Участвовать в промоакциях:<span class="pictogramms">
+											<span class="img">
+												<input id="checkbox_yes" type="checkbox" name="checkbox_yes" hidden />
+												<label for="checkbox_yes">Да</label>
+											</span>
+											
+											<span class="img">
+												<input id="checkbox_no" type="checkbox" name="checkbox_no" hidden />
+												<label for="checkbox_no">Нет</label>
+											</span>
+											<!--
+											Да <img src="resources/images/checkbox.png" />
+												<span class="tick"><img src="resources/images/tick.png" /></span>  -->
+											
+										</span>
+									</div>
+								</div>
+							<!--</div> -->		
+						</div>
+						
+						<div style="clear:both"></div>
+						
+						<div class="table_info">
+							<div class="column_one">
+								<div>Цена и условия актера</div>
+								<div class="txt">Час работы:</div>
+								<div class="txt">День работы:</div>
+								<div class="txt">Месяц работы:</div>
+								<div class="hr"></div>
+								<div class="txt">
+									<span>Дополнительные условия:</span>
+									<button class="edit_pic"></button>
+								</div>
+								<div class="hr" style="margin-top:200px;width:95%;"></div>
+								<div class="txt"><span>Статус:</span><span class="arrow_down"></span></div>
+								<div class="txt">Опыт работы:</div>
+							</div>
+							<div class="column_two">
+								<div>График работы</div>
+								<div class="calendar" id="calendar">
+									
+									<div class="">
+										<img class="arrow" id="calendar_arrow_left" onclick="onClickArrowLeft();" src="resources/images/arrow_left.png" />
+										<span class="mounth" id="mounth_last">Май 2014</span>
+										<span class="mounth_active" id="mounth_active">Июнь 2014</span>
+										<span class="mounth" id="mounth_next">Июль 2014</span>
+										<img class="arrow" id="calendar_arrow_right" onclick="onClickArrowRight();" src="resources/images/arrow_right.png" />
+									</div>
+									
+									<div class="days_column" style="margin-left:0px;">
+										<span class="week">Пн</span>
+										<div class="days">
+											<p>1</p>
+											<p>8</p>
+											<p>15</p>
+											<p>22</p>
+											<p>29</p>
+										</div>
+									</div>
+									<div class="days_column">
+										<span class="week">Вт</span>
+										<div class="days">
+											<p>2</p>
+											<p>9</p>
+											<p>16</p>
+											<p>23</p>
+											<p>30</p>
+										</div>
+									</div>
+									<div class="days_column">
+										<span class="week">Ср</span>
+										<div class="days">
+											<p>3</p>
+											<p>10</p>
+											<p>17</p>
+											<p>24</p>
+											<p>31</p>
+										</div>
+									</div>
+									<div class="days_column">
+										<span class="week">Чт</span>
+										<div class="days">
+											<p>4</p>
+											<p>11</p>
+											<p>18</p>
+											<p>25</p>
+										</div>
+									</div>
+									<div class="days_column">
+										<span class="week">Пт</span>
+										<div class="days">
+											<p>5</p>
+											<p class="active">12</p>
+											<p>19</p>
+											<p>26</p>
+										</div>
+									</div>
+									<div class="days_column">
+										<span class="week">Сб</span>
+										<div class="days">
+											<p>6</p>
+											<p>13</p>
+											<p>20</p>
+											<p>27</p>
+										</div>
+									</div>
+									<div class="days_column">
+										<span class="week">Вс</span>
+										<div class="days">
+											<p>7</p>
+											<p>14</p>
+											<p>21</p>
+											<p>28</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+					 <!-- end 1.psd  --> 
+						
+					 <section class="description-table">
+					 
+					    <div class="anketa_item">
+							<span class="item_title" style="border-right: 0;">Образование:</span> 
+							<span class="hr_conteiner"><span class="hr"></span></span>	
+						</div>
+						<div class="anketa_item">
+							<span class="item_title" style="border-right: 0;">Название учебного заведения:</span> 
+							<span class="hr_conteiner"><span class="hr"></span></span>	
+						</div>
+						
+	
+							<div class="table">
+								<div class ="table-row">
+									<span class="item_title" style="border-bottom: 8px solid #7B7B7B;">Парамеры:</span>
+									<div class="table_cell">
+										<div class="insert-cell">возраст:</div>
+										<div class="insert-cell">рост:</div>
+										<div class="insert-cell">вес:</div>
+										<div class="insert-cell">размер одежды:</div>
+										<div style="padding-left:10px;border-bottom: 8px solid #7B7B7B;text-align: left;">размер обуви:</div>
+									</div>
+								</div>
+								
+								<div class ="table-row">
+									<span class="item_title" style="border-bottom:8px solid #7B7B7B;">Цвет глаз:</span>
+									<div class="table_cell">
+										<div class="insert-cell">голубой:</div>
+										<div class="insert-cell">зелено-голубой:</div>
+										<div class="insert-cell">зелено-карий:</div>
+										<div class="insert-cell">зеленый:</div>
+										<div class="insert-cell">карий:</div>
+										<div class="insert-cell">серо-зеленый:</div>
+										<div class="insert-cell">серо-голубой:</div>
+										<div class="insert-cell">серый:</div>
+										<div class="insert-cell">синий:</div>
+										<div style="padding-left:10px;border-bottom: 8px solid #7B7B7B;text-align: left;">темный:</div>
+									</div>
+								</div>
+								
+								<div class ="table-row">
+									<span class="item_title" style="border-bottom: 8px solid #7B7B7B;">Цвет волос:</span>
+									<div class="table_cell">
+										<div class="insert-cell">блондин:</div>
+										<div class="insert-cell">русый:</div>
+										<div class="insert-cell">шатен:</div>
+										<div style="padding-left:10px;border-bottom: 8px solid #7B7B7B;text-align: left;">брюнет:</div>
+									</div>
+								</div>
+								
+								<div class ="table-row">
+									<span class="item_title">Навыки:</span>
+									<div class="table_cell">
+										<div class="insert-cell"><span class="insert-insert-cell-title">базовые</span><span class="insert-insert-cell"></span><span class="insert-insert-cell"></span></div>
+										<div class="insert-cell">вождение транспорта</div>
+										<div style="padding-left:10px;text-align: left;">вокал</div>
+									</div>
+								</div>
+								<!-- end 2.psd  --> 
+								<div class ="table-row">
+									<span class="item_title" style="border-bottom:8px solid #7B7B7B;"></span>
+									<div class="table_cell">
+										<div class="insert-cell">траги-комический</div>
+										<div class="insert-cell">характерный</div>
+									</div>
+								</div>
+								
+								<div class ="table-row">
+									<span class="item_title" style="border-bottom:0;text-align:left;padding-left:28px;">Опыт:</span>
+									<div class="table_cell">
+										<div class="insert-cell">театр</div>
+										<div class="insert-cell">телевидение</div>
+										<div class="insert-cell">кино</div>
+										<div class="insert-cell" style="border-bottom:0;">клипы</div>
+									</div>
+								</div>
+								
+							</div>	
+							
+							<div class="buttons">
+								<button class="bt_save_orange"></button> 
+								<button class="bt_edit_blue"></button>
+							</div>
+						
+						</section>
+						
+					
+					</section>
+		
+				</div>
+
+			</div>
+			
+		</section>
+
+		<footer class="footer">
+		  <div class="container">
+			<div class="background"></div>
+			
+				<ul class="ul_table">
+					<li><a href="#"><div class="image_href" style="width:168px"></div></a></li>
+					<li><a href="#"><div class="image_href" style="width:199px"></div></a></li>
+					<li><a href="#"><div class="image_href" style="width:199px"></div></a></li>
+					<li><a href="#"><div class="image_href" style="width:207px"></div></a></li>
+					<li><a href="#"><div class="image_href" style="width:199px"></div></a></li>
+					<li><a href="#"><div class="image_href" style="width:230px"></div></a></li>
+					<li><a href="#"><div class="image_href" style="width:250px"></div></a></li>
+				</ul>
+		  </div>
+		</footer>
+	</div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+	
+	<script type="text/javascript">
+	var d = new Date();
+	var date = d.getDate();
+    var year = d.getFullYear();
+    var month = d.getMonth();
+	
+	var current_date 	= date;
+	var current_month 	= month;
+	var current_year 	= year;
+	
+	var months=new Array("Январь","Февраль","Март","Апрель","Май","Июнь", "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь");
+	var months_count_days=new Array(31,28,31,30,31,30, 31,31,30,31,30,31);
+	
+	
+	function isLeapYear(year) {
+		return year % 4 === 0;
+	}
+	function isLeap400Year(year) {
+		return year % 400 === 0;
+	}
+	
+    if (isLeapYear(year)) {
+		months_count_days[1] = 29;
+	}
+	
+	if (isLeap400Year(year)) {
+		months_count_days[1] = 29;
+	}
+	
+	var mounth_active = document.getElementById("mounth_active");
+	var mounth_last = document.getElementById("mounth_last");
+	var mounth_next = document.getElementById("mounth_next");
+	
+	
+	function addMounthToHtml(localMonth) {
+	
+			var calendar = document.getElementById("calendar");
+			
+			   var day_columns_array = document.getElementById('calendar').getElementsByClassName('days_column');
+			   var day = 1; 
+			   
+			 //  alert(["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"][new Date(2015, 5, 14).getDay()]);
+			  // alert(new Date(2015, 5, 13).getDay());  	
+			  
+			   for (var i=0; i<day_columns_array.length; i++) {
+				 
+					var day_columns = day_columns_array[i];
+					var div_days = day_columns_array[i].getElementsByClassName('days');
+					
+					for(j = 0; j < div_days.length; j++) {   // always =  1
+						
+						var week_coef = new Date(current_year, localMonth, 1).getDay();
+						if (week_coef == 0) {
+							week_coef = 7;
+						}
+						div_days[j].innerHTML = '';
+						str = '';
+						var row = 0;
+						day = 1; 
+					
+						if ((i+1)>=week_coef)  {
+							day = (i+1);
+						}
+						
+						while (day<=months_count_days[localMonth]) {
+							if (row == 0) {
+								var current_weekday = new Date(current_year, localMonth, 1).getDay();
+	
+								if ( (i+1) >= current_weekday ) {
+		
+									day = ((i+1)-week_coef)+1;
+									if (day<=0) {
+										str += '<p>&nbsp</p>';
+										day += 7;
+									}
+									str += '<p>'+ day +'</p>';
+									day += 7;	
+								} else {
+									str += '<p>&nbsp</p>';
+									day = (i-week_coef) + 7;
+								}
+
+							} else {
+								str += '<p>'+ day +'</p>';
+								day += 7;
+							}	
+							row++;			
+						}		
+						div_days[j].innerHTML = str;
+					}	
+			 }
+			 
+			 chooseDate();
+	}
+	
+	
+	function addTextMounths() {
+		
+		if (current_month == months.length-1)  {  // декабрь
+			mounth_last.innerHTML = months[current_month-1] +' '+ current_year;
+			mounth_next.innerHTML = months[0] +' '+ (current_year+1);
+		} else {
+			if (current_month == 0)  {  // январь  
+				mounth_last.innerHTML = months[months.length-1] +' '+ (current_year-1);
+				mounth_next.innerHTML = months[current_month+1] +' '+ current_year;
+			} else {
+				mounth_last.innerHTML = months[current_month-1] +' '+ current_year;
+				mounth_next.innerHTML = months[current_month+1] +' '+ current_year;
+			}
+		}
+		
+		mounth_active.innerHTML = months[current_month] +' '+ current_year;	
+	}
+	
+	
+	function onClickArrowLeft() {
+	
+		if (current_month>0) {
+			current_month -= 1;
+		} else {
+			if (current_year>0) {
+				current_month = months.length-1;
+				current_year -= 1;
+			}
+		}
+		addMounthToHtml(current_month);
+		addTextMounths();
+	}
+	
+	function onClickArrowRight() {
+	
+		if (current_month<months.length-1) {
+			current_month += 1;
+		} else {
+			current_month = 0;
+			current_year += 1;	
+		}
+	
+		addMounthToHtml(current_month);
+		addTextMounths();
+	}
+	
+	function chooseDate() {
+	
+		var calendar = document.getElementById("calendar");
+		var anchors = calendar.getElementsByTagName('p');
+        for(var i = 0; i < anchors.length; i++) {
+            var anchor = anchors[i];
+            anchor.onclick = function() {
+               // alert(this.innerHTML);
+				removeAllActive();
+				this.className = 'active';
+            }
+        }
+	}
+	
+	function removeAllActive() {
+		var calendar = document.getElementById("calendar");
+		var anchors = calendar.getElementsByTagName('p');
+        for(var i = 0; i < anchors.length; i++) {
+            var anchor = anchors[i];
+				anchor.className = '';          
+        }
+	}
+	
+	addTextMounths();
+	addMounthToHtml(current_month);
+
+	
+	</script>
+	
+  </body>
+</html>
